@@ -1,11 +1,14 @@
 {
     "root": true,
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "rules": {
@@ -15,6 +18,9 @@
                 "allowString" : false,
                 "allowNumber" : false
             }
-        ]
+        ],
+        "prettier/prettier": "error",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off"
     }
 }
