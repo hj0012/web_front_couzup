@@ -10,7 +10,6 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:styled-components-a11y/recommended',
         'prettier'
     ],
     parser: '@typescript-eslint/parser',
@@ -52,9 +51,26 @@ module.exports = {
         'prefer-destructuring': 0,
         'no-empty-function': 0,
         'ignoreParameters': 0,
-        'react/require-default-props':0,
+        'react/require-default-props': 0,
+        'react/self-closing-comp': 0,
+        'react/destructuring-assignment': 0,
+        'jsx-a11y/click-events-have-key-events': 0,
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
+        'jsx-a11y/no-static-element-interactions': [
+            0,
+            {
+                handlers: [
+                    'onClick',
+                    'onMouseDown',
+                    'onMouseUp',
+                    'onKeyPress',
+                    'onKeyDown',
+                    'onKeyUp',
+                ],
+                allowExpressionValues: true,
+            },
+        ],
         '@typescript-eslint/no-inferrable-types': [
             0,
             {
@@ -71,11 +87,19 @@ module.exports = {
         '@typescript-eslint/no-empty-function': [
             0,
             {
-                allow: ['private-constructors', 'protected-constructors']
+                allow: ['private-constructors', 'protected-constructors' | 'decoratedFunctions'
+                    | 'overrideMethods']
             }
         ],
+        '@typescript-eslint/no-unused-vars': 0,
+        '@typescript-eslint/no-unsafe-member-access': 0,
+        '@typescript-eslint/no-unsafe-call': 0,
+        '@typescript-eslint/no-explicit-any': 0,
         'import/prefer-default-export': 0,
         'no-unused-vars': 0,
+        'no-useless-return': 0,
+        'no-unsafe-call': 0,
+        "no-empty-function": 0,
         'jsx-a11y/aria-role': [
             0,
             {
@@ -84,14 +108,24 @@ module.exports = {
                 ignoreNonDOM: true,
             }
         ],
+        "jsx-a11y/label-has-associated-control": [
+            0,
+            // {
+            //     "labelComponents": ["CustomLabel"],
+            //     "labelAttributes": ["inputLabel"],
+            //     "controlComponents": ["CustomInput"],
+            //     "assert": "both",
+            //     "depth": 3,
+            // }
+        ],
         'jsx-a11y/label-has-for': [
-            2,
+            0,
             {
-                'components': ['Label'],
+                // 'components': ['Label'],
                 // 'required': {
                 //     'every': ['nesting', 'id']
                 // },
-                'allowChildren': true
+                'allowChildren': false
             }
         ],
         'import/extensions': [

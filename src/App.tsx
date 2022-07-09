@@ -1,23 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
+import Map from 'components/page/Map/Map';
+import Login from './components/page/Login/Login';
+import CouponDetail from './components/page/Coupon/Coupon';
+import Search from './components/page/Search/Search';
+import StorageBox from './components/page/StorageBox/StorageBox';
+import "./styles/global.scss"
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div id="app">
+            <Routes>
+                <Route path="/" element={<Map/>}/>
+                <Route path='/login' element={<Login />} />
+                <Route path='/detail' element={<CouponDetail />} />
+                <Route path='/search' element={<Search />} />
+                <Route path='/storage' element={<StorageBox />} />
+            </Routes>
         </div>
     );
 }

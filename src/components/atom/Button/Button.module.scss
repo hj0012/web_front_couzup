@@ -1,0 +1,78 @@
+@import "../../../styles/color";
+@import "../../../styles/functions";
+
+.my-loc {
+    width: 100%;
+    border-radius: rem(8) rem(8) rem(0) rem(0);
+    background-color: $--couzup-main-color;
+    text-align: center;
+    align-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(8);
+    & span {
+        display: block;
+        &:first-child {
+            width: rem(21);
+            height: rem(21);
+            background: url(/assets/icon/asset-my-loc-icon.svg) no-repeat;
+            background-size: rem(21) rem(21);
+            background-position: center; 
+            align-self: center;           
+        }
+        &:last-child {
+            line-height: rem(63);
+            color: #fff;
+        }
+    }
+}
+
+.menu {
+
+}
+
+.back {
+    width: rem(10.35);
+    height: rem(20);
+    align-content: center;
+    background: url(/assets/icon/asset-back-btn-icon.svg) no-repeat;
+    background-size: rem(10.35) rem(20);
+    background-position: left;
+    align-self: center;
+}
+
+.for-kakao{
+    width: 100%;
+    height: rem(48.18);
+    background-color: $--kakao-main-color;
+    border-radius: rem(12);
+    text-align: center;
+    align-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(8);
+    & span {
+        &:first-child {
+            width: rem(21);
+            height: rem(21);
+            background: url(/assets/icon/asset-kakao-login-btn.svg) no-repeat;
+            background-size: rem(21) rem(21);
+            background-position: center; 
+            align-self: center;  
+        }
+        &:last-child {
+            line-height: rem(48.18);
+            color: #000;
+        }
+    }
+}
+
+.for-google{
+
+}
+
+.couzup {
+
+}

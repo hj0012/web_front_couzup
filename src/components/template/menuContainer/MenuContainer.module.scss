@@ -1,0 +1,12 @@
+@import "../../../styles/functions";
+
+.container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: rem(120);
+    & section.content {
+        position: relative;
+        left: rem(23.75);
+    }
+    
+}

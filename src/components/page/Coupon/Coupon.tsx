@@ -1,7 +1,7 @@
 import React from "react";
 
-const Coupon = ():React.ReactElement => {
-    return <div/>;
+const CouponDetail = ():React.ReactElement => {
+    return <div>Coupon</div>;
 }
 
-export default Coupon;
+export default CouponDetail;
